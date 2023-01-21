@@ -29,7 +29,11 @@
 #     -e ONETIMESECRET_SECRET="<put your own secret here>" \
 #     onetimesecret
 
-FROM ruby:2.6
+# *_IMAGE args can be overridden to use deps from private repos
+ARG RUBY_IMAGE=ruby
+
+# 2.6
+FROM ${RUBY_IMAGE}@sha256:9bfe9f8689cf57f5ff4a333a91f01bceb92a73e352912ddb36bf75a2d204a4ed
 
 WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
