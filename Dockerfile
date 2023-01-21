@@ -32,8 +32,8 @@
 # *_IMAGE args can be overridden to use deps from private repos
 ARG RUBY_IMAGE=ruby
 
-# 2.6
-FROM ${RUBY_IMAGE}@sha256:9bfe9f8689cf57f5ff4a333a91f01bceb92a73e352912ddb36bf75a2d204a4ed
+# 2.6-bullseye
+FROM ${RUBY_IMAGE}@sha256:771a810704167e55da8a19970c5dfa6eb795dfee32547adffa29ea72703f7243
 
 WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
